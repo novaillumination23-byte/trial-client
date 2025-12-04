@@ -1,4 +1,5 @@
 import { ArrowRight, Droplet, Sun, Zap } from 'lucide-react';
+import { HeroSection } from "./ui/hero-odyssey";
 
 export default function Hero() {
   return (
@@ -32,7 +33,7 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group px-8 py-4 bg-gradient-to-r from-[#00B3AE] to-[#00767A] text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-[#00B3AE]/50 transition-all flex items-center justify-center gap-2">
+              <button className="group px-8 py-4 bg-gradient-to-r from-[#00B3AE] to-[#00767A] text-white rounded-full font-semibold hover:shadow-2xl hover:shadow-[#00B3AE]/50 transition-all flex items-center gap-3">
                 View Products
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -42,43 +43,12 @@ export default function Hero() {
             </div>
           </div>
 
+          {/* Right column: replaced static image with interactive hero animation */}
           <div className="relative">
             <div className="relative z-10">
-              <div className="relative h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img
-                  src="https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                  alt="Engine and mechanical systems"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#041524] via-transparent to-transparent"></div>
-
-                <div className="absolute bottom-0 left-0 right-0 p-8">
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="bg-gradient-to-br from-[#00B3AE]/90 to-[#00767A]/90 backdrop-blur-sm rounded-xl p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Droplet className="w-5 h-5 text-white" />
-                        <h4 className="text-white font-semibold text-sm">Lubricants</h4>
-                      </div>
-                      <p className="text-gray-100 text-xs">High-performance</p>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-[#FFC857]/90 to-[#FF8A3D]/90 backdrop-blur-sm rounded-xl p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Sun className="w-5 h-5 text-white" />
-                        <h4 className="text-white font-semibold text-sm">Solar</h4>
-                      </div>
-                      <p className="text-gray-100 text-xs">Clean energy</p>
-                    </div>
-
-                    <div className="bg-gradient-to-br from-[#FF8A3D]/90 to-[#FFC857]/90 backdrop-blur-sm rounded-xl p-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Zap className="w-5 h-5 text-white" />
-                        <h4 className="text-white font-semibold text-sm">EV</h4>
-                      </div>
-                      <p className="text-gray-100 text-xs">Future-ready</p>
-                    </div>
-                  </div>
-                </div>
+              <div className="relative h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-black">
+                {/* Embedded Hero Odyssey animation component (uses WebGL + motion) */}
+                <HeroSection />
               </div>
             </div>
           </div>
@@ -87,3 +57,5 @@ export default function Hero() {
     </section>
   );
 }
+
+

@@ -18,13 +18,13 @@ export default function GlobalPresence() {
     devicePixelRatio: 2,
     phi: 0,
     theta: 0.3,
-    dark: 0.2,
-    diffuse: 1.5,
+    dark: 0.95,
+    diffuse: 0.4,
     mapSamples: 16000,
-    mapBrightness: 1.5,
-    baseColor: [0.15, 0.4, 0.6],
+    mapBrightness: 0.5,
+    baseColor: [0.004, 0.129, 0.224],
     markerColor: [0 / 255, 179 / 255, 174 / 255],
-    glowColor: [0.15, 0.6, 0.8],
+    glowColor: [0.004, 0.129, 0.224],
     markers: locations.map(loc => ({
       location: loc.coordinates,
       size: loc.status === 'Headquarters' ? 0.12 : 0.08
